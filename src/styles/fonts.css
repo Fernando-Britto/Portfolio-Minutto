@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Satoshi";
+    src:
+      url("/CV/Minuttos-Portfolio/public/Fonts/Satoshi/satoshi.woff2") format("woff2"),
+      url("/CV/Minuttos-Portfolio/public/Fonts/Satoshi/satoshi.woff") format("woff"),
+      url("/CV/Minuttos-Portfolio/public/Fonts/Satoshi/satoshi.ttf") format("truetype");
+  
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Onest";
+    src:
+      url('/CV/Minuttos-Portfolio/public/Fonts/Onest/onest.woff2') format("woff2"),
+      url("/CV/Minuttos-Portfolio/public/Fonts/Onest/onest.woff") format("woff"),
+      url("/CV/Minuttos-Portfolio/public/Fonts/Onest/onest.ttf") format("truetype");
+  
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
