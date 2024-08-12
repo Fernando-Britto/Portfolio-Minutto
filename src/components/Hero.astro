@@ -1,25 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import "../styles/fonts.css"
+import MailIcon from '../../public/icons/MailIcon.astro'
+import LinkIcon from '../../public/icons/LinkIcon.astro'
 ---
 <Layout>
     <section>
         <div class="hero">
             
-
-            <div>   
-                <h1>Hey! I'm Britto Fernando</h1>
-                <h3><strong>Front end</strong> developer.</h3>
+            <div class="header">
+                <div>   
+                    <h1 class="titleHeader" >Hey! I'm Britto Fernando</h1> 
+                    <h3 class="subTitleHeader" ><strong>Front end</strong> developer.</h3>
+                </div>
+                <img src="/images/avatar2.jpg" alt="foto de avatar">
             </div>
-
-            <div class="avatar">
+            <!-- <div class="avatar">
                 <img src="/images/avatar2.jpg" alt="foto de avatar">
                 <!-- <a href=""><div class="available">Available for work</div></a> -->
-            </div>
+            <!-- </div> -->
 
             <p>Trainee developer with <strong>+2 years of coding experience</strong>, currently <b>finishing a degree in Computer Systems Analysis</b>, and a video game content creator from Argentina. <strong>Eager to explore new opportunities</strong>.</p>
         </div>
-        
+        <div class="CTA" >
+            <div>
+                <h4 class="titleCTA" >Currently available for work. </h4>
+                <h5 class="subCTA">Let's collaborate!</h5>
+            </div>
+            <nav>
+                <a href="">
+                    <div class="available">
+                        <MailIcon/> 
+                        Contact me
+                    </div>
+                </a>
+                <a href="">
+                    <div class="available">
+                        <LinkIcon/> 
+                        LinkedIn
+                    </div>
+                </a>
+            </nav>
+        </div>
     </section>
    
 </Layout>
@@ -29,28 +51,36 @@ import "../styles/fonts.css"
         align-items: center;
         gap:15px;
     } */
+
+    .header{
+        max-width: 52rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
     img{
         width: 120px;
         height: 120px;
         border-radius: 50%;
     }
-    /* .available{
+    .available{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 30px;
-        width: 150px;
-        border-radius: 5px;
+        border-radius: 7px;
         font-family: "Satoshi";
-        font-weight: 500;
+        font-weight: 700;
         font-size: 15px;
         color: #b86bff;
         border: solid 1px rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
+        padding: 4px 16px;
+        gap:5px;
     }
     a{
         height: 50px;
-        width: 150px;
         display: flex;
         place-items: center;
     }
@@ -58,31 +88,30 @@ import "../styles/fonts.css"
     a:hover .available {
     background-color: rgba(69, 41, 95, 0.6);
     border-color: transparent;
-    } */
+    }
     
     section{
-        margin-top: 50px;
+        margin-top: 100px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 56rem;
+        max-width: 55rem;
+        flex-direction: column;
+        gap: 50px;
     }
-    h1{
+    .titleHeader{
         color: #fafaf9 ;
         font-family: "Onest";
         font-weight: 800;
         font-size: 45px;
         opacity: .9;
-        margin: 15px 0 0;
     }
     
 
-    h3{
+    .subTitleHeader{
         color: #fafaf980;
         font-family: "Satoshi";
         font-weight: 700; 
         font-size: 30px;
-        margin: 5px 0 35px;
+        margin-top: 5px;
     }
     strong {
         color: #b86bff;
@@ -93,12 +122,39 @@ import "../styles/fonts.css"
         font-weight: 400;
         font-size: 21px;
         width: 100%;
+        margin-top: 50px;
     }
-    .hero{
+    /* .hero{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;   
         gap: 35px;    
+    } */
+
+    .titleCTA{
+        color: #fafaf9c7;
+        font-family: "Satoshi";
+        font-weight: 700; 
+        font-size: 25px;
+    } 
+
+    .subCTA{
+        color: #fafaf980;
+        font-family: "Satoshi";
+        font-weight: 400; 
+        font-size: 19px;
+    }
+
+    .CTA{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 650px;
+    }
+
+    nav{
+        display: flex;
+        gap: 20px;
     }
 </style>
