@@ -1,0 +1,55 @@
+---
+import HeaderAbout from "../../public/icons/HeaderAbout.astro"
+import HeaderCode from "../../public/icons/HeaderCode.astro"
+import HeaderMail from "../../public/icons/HeaderMail.astro"
+---
+
+<header>
+    <nav>
+        <a href="#proyects"><HeaderCode/> Proyects</a>
+        <a href="#about"><HeaderAbout/> About me</a>
+        <a href="#contact"> <HeaderMail/> Contact</a>
+    </nav>
+</header>
+
+<style>
+    header{
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 200px;
+    }
+
+    nav{
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    @keyframes nav-shadown{
+        100%{
+            background-color: rgb(3 7 18);
+        }
+    }
+
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: "Satoshi";
+        font-weight: 500;
+        font-size: 16px;
+        color: #fafaf9e2;
+        padding: 10px;
+        
+        &:hover{
+            color:#b86bff;
+        }
+    }
+</style>
