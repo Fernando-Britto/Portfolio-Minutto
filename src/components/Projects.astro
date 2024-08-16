@@ -1,17 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProyectCode from "../../public/icons/ProyectCode.astro";
+import CodeIcon from "../../public/icons/CodeIcon.astro";
+import GitHubIcon from "../../public/icons/GitHubIcon.astro";
+import LinkIcon from "../../public/icons/LinkIcon.astro"
 ---
 
 <Layout>
     <section id="proyects" >
-        <h2> <ProyectCode/> My favorite projects</h2>
+        <h2> <CodeIcon width="45px" height="45px" /> My favorite projects</h2>
         <ul id="cards" >
             <li class="card" id="card_1" >
                 <div class="card__content" >
-                    <div>
-                        <h3>Card One</h3>
-                        <h4>Subtitle</h4>
+                    <div class="text__content" >
+                        <header>
+                            <div class="contenedorTitle" >
+                                <h3 class="TitleProyect" >Card One</h3>
+                                <a href=""><GitHubIcon/>Code</a>
+                                <a href=""><LinkIcon/>Preview</a>
+                            </div>
+                            <h4 class="SubProyect" >Subtitle</h4>
+                        </header>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
@@ -19,9 +27,15 @@ import ProyectCode from "../../public/icons/ProyectCode.astro";
             </li>
             <li class="card" id="card_2" >
                 <div class="card__content">
-                    <div>
-                        <h3>Card One</h3>
-                        <h4>Subtitle</h4>
+                    <div class="text__content" >
+                        <header>
+                            <div class="contenedorTitle" >
+                                <h3 class="TitleProyect" >Card One</h3>
+                                <a href=""><GitHubIcon/>Code</a>
+                                <a href=""><LinkIcon/>Preview</a>
+                            </div>
+                            <h4 class="SubProyect" >Subtitle</h4>
+                        </header>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
@@ -29,9 +43,15 @@ import ProyectCode from "../../public/icons/ProyectCode.astro";
             </li>
             <li class="card" id="card_3">
                 <div class="card__content">
-                    <div>
-                        <h3>Card One</h3>
-                        <h4>Subtitle</h4>
+                    <div class="text__content" >
+                        <header>
+                            <div class="contenedorTitle" >
+                                <h3 class="TitleProyect" >Card One</h3>
+                                <a href=""><GitHubIcon/>Code</a>
+                                <a href=""><LinkIcon/>Preview</a>
+                            </div>
+                            <h4 class="SubProyect" >Subtitle</h4>
+                        </header>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
@@ -39,9 +59,15 @@ import ProyectCode from "../../public/icons/ProyectCode.astro";
             </li>
             <li class="card" id="card_4" >
                 <div class="card__content" >
-                    <div>
-                        <h3>Card One</h3>
-                        <h4>Subtitle</h4>
+                    <div class="text__content">
+                        <header>
+                            <div class="contenedorTitle" >
+                                <h3 class="TitleProyect" >Card One</h3>
+                                <a href=""><GitHubIcon/>Code</a>
+                                <a href=""><LinkIcon/>Preview</a>
+                             </div>
+                            <h4 class="SubProyect" >Subtitle</h4>
+                        </header>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
@@ -62,7 +88,7 @@ h2{
     color: #fafaf9;
         font-family: "Satoshi";
         font-weight: 700; 
-        font-size: 30px;
+        font-size: 35px;
         position: sticky;
         top: 100px;
     align-self: center;
@@ -158,4 +184,42 @@ section{
 	animation-timeline: --cards-element-scrolls-in-body;
 	animation-range: entry-crossing var(--start-range) exit-crossing var(--end-range);
 }
+
+.text__content{
+    padding: 40px;
+}
+
+header{
+    margin: 5px 0 35px;
+}
+
+.contenedorTitle{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.TitleProyect{
+    color:#b86bff;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+a{
+    color:#fafaf9; 
+    display: flex;
+    gap: 5px;
+    font-family: "Satoshi";
+    font-weight: 500;
+}
+
+.SubProyect{
+    color:#fafaf9;
+    font-size: 20px;
+}
+
+p{
+    color: #fafaf9A6;
+    font-size: 19px;
+}
+
 </style>

@@ -1,14 +1,16 @@
 ---
-import HeaderAbout from "../../public/icons/HeaderAbout.astro"
-import HeaderCode from "../../public/icons/HeaderCode.astro"
-import HeaderMail from "../../public/icons/HeaderMail.astro"
+import AboutIcon from "../../public/icons/AboutIcon.astro"
+import CodeIcon from "../../public/icons/CodeIcon.astro"
+import LenguajeIcon from "../../public/icons/LenguajeIcon.astro"
+import MailIcon from "../../public/icons/MailIcon.astro"
 ---
 
 <header>
     <nav>
-        <a href="#proyects"><HeaderCode/> Proyects</a>
-        <a href="#about"><HeaderAbout/> About me</a>
-        <a href="#contact"> <HeaderMail/> Contact</a>
+        <a href="#proyects"><CodeIcon width="16px" height="16px" /> Proyects</a>
+        <a href="#about"><AboutIcon/> About me</a>
+        <a href="#contact"> <MailIcon width="16px" height="16px"/> </> Contact</a>
+        <button><LenguajeIcon/>Eng</button>
     </nav>
 </header>
 
@@ -38,7 +40,7 @@ import HeaderMail from "../../public/icons/HeaderMail.astro"
     }
 
 
-    a{
+    a, button {
         display: flex;
         align-items: center;
         gap: 5px;
