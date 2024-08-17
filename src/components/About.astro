@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section>
+    <h2>About me</h2>
+    <div class="contenedor">
+      <article class="experience" >
+        <header>Experience Outside of Programming</header>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
+          id fugit beatae laboriosam error consequuntur, voluptatum ratione
+          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
+          ad illo!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
+          id fugit beatae laboriosam error consequuntur, voluptatum ratione
+          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
+          ad illo!
+        </p>
+        <div></div>
+      </article>
+
+      <article class="hobbies" >
+        <header>Hobbies and Interests</header>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
+          id fugit beatae laboriosam error consequuntur, voluptatum ratione
+          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
+          ad illo!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
+          id fugit beatae laboriosam error consequuntur, voluptatum ratione
+          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
+          ad illo!
+        </p>
+        <div></div>
+      </article>
+
+      <article class="social" >
+        <header>Social Media</header>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
+          id fugit beatae laboriosam error consequuntur, voluptatum ratione
+          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
+          ad illo!
+        </p>
+        <div></div>
+      </article>
+
+      <article class="location" >
+        <img src="../../public/images/world.webp" alt="">
+      </article>
+      
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+
+    section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 250px;
+    }
+
+    h2{
+        color: #fafaf9;
+        font-family: "Satoshi";
+        font-weight: 700; 
+        font-size: 35px;  
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    }
+
+    .contenedor{
+        max-width: 80rem;
+        display: grid;
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+        gap: 20px;
+        
+    }
+
+    .experience{
+        grid-column: 1/6;
+    }
+
+    .hobbies{
+        grid-column: 6/11;
+    }
+
+    .location{
+        grid-column:4/11 ;
+        padding: 0;
+        overflow: hidden;
+        height: 350px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .social{
+        grid-column: 1/4;
+    }
+
+    article{
+        border: solid 1px rgba(255, 255, 255, 0.2);
+        border-radius: .75rem;
+        padding: 20px;
+    }
+
+    header{
+        color:#b86bff;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    p{
+        color: #fafaf9;
+    }
+
+    img{
+        max-width: fit-content;
+    }
+
+</style>

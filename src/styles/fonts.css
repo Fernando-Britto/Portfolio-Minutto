@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Satoshi";
     src:
-      url("../../public/Fonts/Satoshi/satoshi.woff2") format("woff2"),
+      url("/Fonts/Satoshi/satoshi.woff2") format("woff2"),
       url("../../public/Fonts/Satoshi/satoshi.woff") format("woff"),
       url("../../public/Fonts/Satoshi/satoshi.ttf") format("truetype");
   
@@ -13,7 +13,7 @@
   @font-face {
     font-family: "Onest";
     src:
-      url('../../public/Fonts/Onest/onest.woff2') format("woff2"),
+      url('/Fonts/Onest/onest.woff2') format("woff2"),
       url('../../public/Fonts/Onest/onest.woff') format("woff"),
       url('../../public/Fonts/Onest/onest.ttf') format("truetype");
   
