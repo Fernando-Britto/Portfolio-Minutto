@@ -1,29 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutIcon from "../../public/icons/AboutIcon.astro";
 ---
 
 <Layout>
   <section>
-    <h2>About me</h2>
+    <h2><AboutIcon width="45px" height="45px" /> About me</h2>
     <div class="contenedor">
-      <article class="experience" >
+      <article class="experience">
         <header>Experience Outside of Programming</header>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
-          id fugit beatae laboriosam error consequuntur, voluptatum ratione
-          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
-          ad illo!
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
-          id fugit beatae laboriosam error consequuntur, voluptatum ratione
-          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
-          ad illo!
-        </p>
+        <p>In 2022, I worked as a kitchen assistant at an International Culinary Institute.</p>
+
+        <p>The following year, I spent six months working in a café in the customer service department, where I was promoted to branch manager.</p>
+
+        <p>I held this position until the end of the year when I decided to leave it to focus full-time on my studies and programming.</p>
+
+        <p>Currently, I work with a team dedicated to content creation, where I handle video editing.</p>
         <div></div>
       </article>
 
-      <article class="hobbies" >
+      <article class="hobbies">
         <header>Hobbies and Interests</header>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
@@ -40,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
         <div></div>
       </article>
 
-      <article class="social" >
+      <article class="social">
         <header>Social Media</header>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
@@ -51,82 +47,127 @@ import Layout from "../layouts/Layout.astro";
         <div></div>
       </article>
 
-      <article class="location" >
-        <img src="../../public/images/world.webp" alt="">
+      <article class="location">
+        <div class="country">Misiones, Argentina</div>
+        <img src="/images/world.webp" alt="" />
+        <div class="circle"></div>
       </article>
-      
-
     </div>
   </section>
 </Layout>
 
 <style>
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 250px;
+  }
 
-    section{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 40px;
-        margin-bottom: 250px;
-    }
-
-    h2{
-        color: #fafaf9;
-        font-family: "Satoshi";
-        font-weight: 700; 
-        font-size: 35px;  
+  h2 {
+    color: #fafaf9;
+    font-family: "Satoshi";
+    font-weight: 700;
+    font-size: 35px;
     align-self: center;
     display: flex;
+    align-items: center;
     gap: 10px;
+  }
+
+  .contenedor {
+    max-width: 80rem;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .experience {
+
+    grid-column: 1/6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: pretty;
+  }
+
+  .hobbies {
+    grid-column: 6/11;
+  }
+
+  .location {
+    grid-column: 4/11;
+    padding: 0;
+    overflow: hidden;
+    height: 350px;
+    display: grid;
+    justify-content: end;
+  }
+
+  .social {
+    grid-column: 1/4;
+  }
+
+  article {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    padding: 30px;
+  }
+
+  header {
+    color: #b86bff;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Satoshi";
+    font-weight: 700;
+  }
+
+  p {
+    color: #fafaf9A6;
+    font-family: "Satoshi";
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .country {
+    position: absolute;
+    background: #fafaf9b1;
+    color: black;
+    border-radius: 0.75rem;
+    align-self: end;
+    margin: 15px;
+    padding: 7px;
+  }
+
+  img {
+    max-width: fit-content;
+  }
+
+  .circle {
+    position: absolute;
+    align-self: center;
+    justify-self: end;
+    border: solid 2px white;
+    background: rgb(103 155 255);
+    margin: 15px 140px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #0000001a;
+    animation: pulse-animation 4s ease-out infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgb(103, 155, 255, 0.5);
     }
 
-    .contenedor{
-        max-width: 80rem;
-        display: grid;
-        grid-template-columns: repeat(10, minmax(0, 1fr));
-        gap: 20px;
-        
+    35% {
+      box-shadow: 0 0 0 20px rgba(103, 156, 255, 0);
     }
-
-    .experience{
-        grid-column: 1/6;
+    100% {
+      box-shadow: 0 0 0 15px rgba(103, 156, 255, 0);
     }
-
-    .hobbies{
-        grid-column: 6/11;
-    }
-
-    .location{
-        grid-column:4/11 ;
-        padding: 0;
-        overflow: hidden;
-        height: 350px;
-        display: flex;
-        justify-content: end;
-    }
-
-    .social{
-        grid-column: 1/4;
-    }
-
-    article{
-        border: solid 1px rgba(255, 255, 255, 0.2);
-        border-radius: .75rem;
-        padding: 20px;
-    }
-
-    header{
-        color:#b86bff;
-        margin-bottom: 10px;
-        font-size: 30px;
-    }
-
-    p{
-        color: #fafaf9;
-    }
-
-    img{
-        max-width: fit-content;
-    }
-
+  }
 </style>
