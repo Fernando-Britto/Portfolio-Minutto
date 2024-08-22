@@ -1,50 +1,98 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AboutIcon from "../../public/icons/AboutIcon.astro";
+import LinkedInIcon from "../../public/icons/LinkedInIcon.astro"
+import RouteIcon from "../../public/icons/RouteIcon.astro";
+import AdressIcon from "../../public/icons/AdressIcon.astro";
+
 ---
 
 <Layout>
-  <section>
-    <h2><AboutIcon width="45px" height="45px" /> About me</h2>
+  <section id="about" class="about-me">
+    <h2><AboutIcon width="45px" height="45px" />A Bit About Me</h2>
     <div class="contenedor">
       <article class="experience">
-        <header>Experience Outside of Programming</header>
-        <p>In 2022, I worked as a kitchen assistant at an International Culinary Institute.</p>
+        <header> <LinkedInIcon width="30px" height="30px" /> Experience Outside Programming</header>
+        <ul class="trabajos">
+          <li class="trabajo">
+            <h3 class="titleTrabajo">Kitchen Assistant 2022</h3>
+            <p class="subTrabajo">
+              <strong>International Culinary Institute</strong>
+            </p>
+            <p class="textTrabajo">
+              Assisted in kitchen operations and food preparation, <b
+                class="destacar"
+                >contributing to a top-tier culinary environment</b
+              >.
+            </p>
+          </li>
 
-        <p>The following year, I spent six months working in a café in the customer service department, where I was promoted to branch manager.</p>
+          <li class="trabajo">
+            <h3 class="titleTrabajo">Branch Manager 2023</h3>
+            <p class="subTrabajo"><strong>Polijub Café</strong></p>
+            <p class="textTrabajo">
+              Managed customer service operations and <b class="destacar"
+                >led a team</b
+              >, <strong>achieving a promotion to branch manager within six months</strong
+              >.
+            </p>
+            <p class="textTrabajo">
+              Oversaw daily activities and staff, enhancing overall service
+              efficiency.
+            </p>
+          </li>
 
-        <p>I held this position until the end of the year when I decided to leave it to focus full-time on my studies and programming.</p>
-
-        <p>Currently, I work with a team dedicated to content creation, where I handle video editing.</p>
-        <div></div>
+          <li class="trabajo">
+            <h3 class="titleTrabajo">Content Creator 2024 - Present</h3>
+            <p class="subTrabajo"><strong>Freelance</strong></p>
+            <p class="textTrabajo">
+              <strong>Collaborate with a team</strong> to produce and edit video content, focusing
+              on <b class="destacar">engaging and impactful visual material</b>.
+            </p>
+          </li>
+        </ul>
       </article>
 
       <article class="hobbies">
-        <header>Hobbies and Interests</header>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
-          id fugit beatae laboriosam error consequuntur, voluptatum ratione
-          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
-          ad illo!
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
-          id fugit beatae laboriosam error consequuntur, voluptatum ratione
-          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
-          ad illo!
-        </p>
-        <div></div>
+        <header><RouteIcon/> My Journey in Programming</header>
+        <section class="textAbout">
+          <picture>
+            <img class="yt" src="/images/Dev.png" alt="" />
+          </picture>
+
+          <p>
+            I discovered programming exactly <b>four years ago</b> thanks to this
+            video.
+          </p>
+
+          <p>
+            Since then, I have been continuously learning, driven by an
+            <strong>insatiable curiosity</strong> about how websites function and a <b>deep passion
+            for the field</b>.
+          </p>
+
+          <p>
+            To complement my front-end development skills, <b>I studied graphic
+            design</b>, which has allowed me to better <strong>understand the aesthetics and
+            functionality of websites</strong>.
+          </p>
+
+          <p>
+            Currently, <b>I am completing my degree in Systems Analysis</b> and am
+            looking for a job that will allow me to dedicate to what <strong>truly
+            excites me</strong>: creating and optimizing digital experiences.
+          </p>
+        </section>
       </article>
 
       <article class="social">
-        <header>Social Media</header>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nisi
-          id fugit beatae laboriosam error consequuntur, voluptatum ratione
-          aliquam ipsam quod repellat, molestiae nostrum, dolor explicabo. Id et
-          ad illo!
-        </p>
-        <div></div>
+        <header><AdressIcon/> Get in Touch</header>
+        <section>
+          <a href="https://www.instagram.com/minuttos_"></a>
+          <a href="https://www.linkedin.com/in/brittofernando"></a>
+          <a href="mailto:fernandobritto925@gmail.com"></a>
+          <a href="https://github.com/fernando925"></a>
+        </section>
       </article>
 
       <article class="location">
@@ -57,7 +105,7 @@ import AboutIcon from "../../public/icons/AboutIcon.astro";
 </Layout>
 
 <style>
-  section {
+  .about-me {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -83,17 +131,95 @@ import AboutIcon from "../../public/icons/AboutIcon.astro";
     gap: 20px;
   }
 
-  .experience {
+  article {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    padding: 30px;
+  }
 
+  header {
+    color: #fafaf9;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Satoshi";
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .experience {
     grid-column: 1/6;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     text-wrap: pretty;
+  }
+
+  .trabajos {
+    list-style: disc;
+    margin: 0 0 0 20px;
+  }
+
+  .trabajo {
+    color: #fafaf9cc;
+    font-family: "Satoshi";
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .titleTrabajo {
+    color: #fafaf9;
+    font-family: "Satoshi";
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .subTrabajo {
+    font-size: 19px;
+    color: #fafaf9cc;
+  }
+
+  .textTrabajo {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  b {
+    color: #b86bffd1;
   }
 
   .hobbies {
     grid-column: 6/11;
+  }
+
+  .yt {
+    float: right;
+    max-width: 220px;
+    margin-left: 20px;
+  }
+
+  .textAbout {
+    font-size: 19px;
+    text-wrap: pretty;
+    color: #fafaf9cc;
+    font-family: "Satoshi";
+    font-weight: 400;
+  }
+
+  .textAbout :nth-child(2) {
+    margin: 25px 0 15px;
+  }
+
+  .textAbout :nth-child(3){
+    margin-bottom: 15px;
+  }
+  .textAbout :nth-child(4){
+    margin-bottom: 15px;
+  }
+
+  .social {
+    grid-column: 1/4;
   }
 
   .location {
@@ -103,31 +229,6 @@ import AboutIcon from "../../public/icons/AboutIcon.astro";
     height: 350px;
     display: grid;
     justify-content: end;
-  }
-
-  .social {
-    grid-column: 1/4;
-  }
-
-  article {
-    border: solid 1px rgba(255, 255, 255, 0.2);
-    border-radius: 0.75rem;
-    padding: 30px;
-  }
-
-  header {
-    color: #b86bff;
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-family: "Satoshi";
-    font-weight: 700;
-  }
-
-  p {
-    color: #fafaf9A6;
-    font-family: "Satoshi";
-    font-weight: 400;
-    font-size: 20px;
   }
 
   .country {
