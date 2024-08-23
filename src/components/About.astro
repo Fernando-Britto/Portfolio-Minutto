@@ -15,26 +15,22 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
         <header> <LinkedInIcon width="30px" height="30px" /> Experience Outside Programming</header>
         <ul class="trabajos">
           <li class="trabajo">
-            <h3 class="titleTrabajo">Kitchen Assistant 2022</h3>
-            <p class="subTrabajo">
-              <strong>International Culinary Institute</strong>
-            </p>
+            <div class="headerTrabajo">
+              <h3 class="titleTrabajo">Kitchen Assistant</h3>
+              <p>International Culinary Institute (2022)</p>
+            </div>
             <p class="textTrabajo">
-              Assisted in kitchen operations and food preparation, <b
-                class="destacar"
-                >contributing to a top-tier culinary environment</b
-              >.
+              Assisted in kitchen operations and food preparation, <b>contributing to a top-tier culinary environment</b>.
             </p>
           </li>
 
           <li class="trabajo">
-            <h3 class="titleTrabajo">Branch Manager 2023</h3>
-            <p class="subTrabajo"><strong>Polijub Café</strong></p>
+            <div class="headerTrabajo">
+              <h3 class="titleTrabajo">Branch Manager</h3>
+            <p>Polijub Café (2023)</p>
+            </div>
             <p class="textTrabajo">
-              Managed customer service operations and <b class="destacar"
-                >led a team</b
-              >, <strong>achieving a promotion to branch manager within six months</strong
-              >.
+              <b>Managed customer service operations and led a team</b>, achieving a promotion to branch manager within six months.
             </p>
             <p class="textTrabajo">
               Oversaw daily activities and staff, enhancing overall service
@@ -43,17 +39,17 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
           </li>
 
           <li class="trabajo">
-            <h3 class="titleTrabajo">Content Creator 2024 - Present</h3>
-            <p class="subTrabajo"><strong>Freelance</strong></p>
-            <p class="textTrabajo">
-              <strong>Collaborate with a team</strong> to produce and edit video content, focusing
-              on <b class="destacar">engaging and impactful visual material</b>.
+            <div class="headerTrabajo">
+              <h3 class="titleTrabajo">Content Creator</h3>
+            <p>Freelance (2024 - Present)</p>
+            </div>
+            <p class="textTrabajo">Collaborate with a team to produce and edit video content, focusing on <b>engaging and impactful visual material</b>.
             </p>
           </li>
         </ul>
       </article>
 
-      <article class="hobbies">
+      <article class="journey">
         <header><RouteIcon/> My Journey in Programming</header>
         <section class="textAbout">
           <picture>
@@ -86,7 +82,7 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
       </article>
 
       <article class="social">
-        <header><AdressIcon/> Get in Touch</header>
+        <header><AdressIcon/>Get in Touch</header>
         <section>
           <a href="https://www.instagram.com/minuttos_"></a>
           <a href="https://www.linkedin.com/in/brittofernando"></a>
@@ -134,12 +130,11 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
   article {
     border: solid 1px rgba(255, 255, 255, 0.2);
     border-radius: 0.75rem;
-    padding: 30px;
+    padding: 35px;
   }
 
   header {
-    color: #fafaf9;
-    margin-bottom: 10px;
+    color: #b86bff;
     font-size: 30px;
     font-family: "Satoshi";
     font-weight: 700;
@@ -155,41 +150,39 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
     text-wrap: pretty;
   }
 
-  .trabajos {
-    list-style: disc;
-    margin: 0 0 0 20px;
-  }
 
   .trabajo {
-    color: #fafaf9cc;
+    color: #fafaf9f0;
     font-family: "Satoshi";
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 15px;
+    margin-top: 30px;
+  }
+
+  .headerTrabajo{
+    color: #b86bff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 21px;
   }
 
   .titleTrabajo {
-    color: #fafaf9;
     font-family: "Satoshi";
     font-weight: 700;
-    font-size: 20px;
+    
   }
-
-  .subTrabajo {
-    font-size: 19px;
-    color: #fafaf9cc;
+  .titleTrabajo::after{
+    color: rgba(255, 255, 255, 0.3);
+    content: " | ";
+    margin-left: 5px;
   }
 
   .textTrabajo {
     font-size: 18px;
     margin-top: 5px;
+    font-weight:400;
   }
 
-  b {
-    color: #b86bffd1;
-  }
-
-  .hobbies {
+  .journey {
     grid-column: 6/11;
   }
 
@@ -202,7 +195,7 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
   .textAbout {
     font-size: 19px;
     text-wrap: pretty;
-    color: #fafaf9cc;
+    color: #fafaf9f0;
     font-family: "Satoshi";
     font-weight: 400;
   }
