@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro'
 import "../styles/fonts.css"
 import MailIcon from '../../public/icons/MailIcon.astro'
 import LinkedInIcon from '../../public/icons/LinkedInIcon.astro'
+import {getI18N} from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 <Layout>
     <section>
@@ -10,16 +14,11 @@ import LinkedInIcon from '../../public/icons/LinkedInIcon.astro'
             
             <div class="header">
                 <div>   
-                    <h1 class="titleHeader" >Hey! I'm Britto Fernando</h1> 
+                    <h1 class="titleHeader">{i18n.WELCOME}</h1> 
                     <h3 class="subTitleHeader" ><strong>Front end</strong> developer.</h3>
                 </div>
                 <img src="/images/avatar2.jpg" alt="foto de avatar">
             </div>
-            <!-- <div class="avatar">
-                <img src="/images/avatar2.jpg" alt="foto de avatar">
-                <!-- <a href=""><div class="available">Available for work</div></a> -->
-            <!-- </div> -->
-
             <p>Trainee developer with <strong>+2 years of coding experience</strong>, currently <b>finishing a degree in Computer Systems Analysis</b>, and a video game content creator from Argentina. <strong>Eager to explore new opportunities</strong>.</p>
         </div>
         <div class="CTA" >
@@ -119,7 +118,7 @@ import LinkedInIcon from '../../public/icons/LinkedInIcon.astro'
     p{
         color: #fafaf9A6;
         font-family: "Satoshi";
-        font-weight: 400;
+        font-weight: 500;
         font-size: 21px;
         width: 100%;
         margin-top: 50px;

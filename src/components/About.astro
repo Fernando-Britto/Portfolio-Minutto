@@ -4,6 +4,9 @@ import AboutIcon from "../../public/icons/AboutIcon.astro";
 import LinkedInIcon from "../../public/icons/LinkedInIcon.astro"
 import RouteIcon from "../../public/icons/RouteIcon.astro";
 import AdressIcon from "../../public/icons/AdressIcon.astro";
+import GitHubIcon from "../../public/icons/GitHubIcon.astro"
+import MailIcon from "../../public/icons/MailIcon.astro";
+import InstaIcon from "../../public/icons/InstaIcon.astro"
 
 ---
 
@@ -43,7 +46,7 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
               <h3 class="titleTrabajo">Content Creator</h3>
             <p>Freelance (2024 - Present)</p>
             </div>
-            <p class="textTrabajo">Collaborate with a team to produce and edit video content, focusing on <b>engaging and impactful visual material</b>.
+            <p class="textTrabajo">Collaborate with a team to produce and edit video content, focusing on <b>engaging and compelling visual material</b>.
             </p>
           </li>
         </ul>
@@ -57,37 +60,45 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
           </picture>
 
           <p>
-            I discovered programming exactly <b>four years ago</b> thanks to this
+            I discovered programming exactly <strong>four years ago</strong> thanks to this
             video.
           </p>
 
           <p>
-            Since then, I have been continuously learning, driven by an
-            <strong>insatiable curiosity</strong> about how websites function and a <b>deep passion
-            for the field</b>.
+            Since then, I have been <strong>continuously learning</strong>, driven by an
+            insatiable curiosity about how websites function and a <strong>deep passion
+            for the field</strong>.
           </p>
 
           <p>
-            To complement my front-end development skills, <b>I studied graphic
-            design</b>, which has allowed me to better <strong>understand the aesthetics and
-            functionality of websites</strong>.
+            To complement my front-end development skills, <strong>I studied graphic
+            design</strong>, which has allowed me to better understand the aesthetics and
+            functionality of websites.
           </p>
 
           <p>
-            Currently, <b>I am completing my degree in Systems Analysis</b> and am
-            looking for a job that will allow me to dedicate to what <strong>truly
-            excites me</strong>: creating and optimizing digital experiences.
+            Currently, I am completing my <strong>degree in Systems Analysis</strong> and am
+            looking for a job that will allow me to dedicate to what truly
+            excites me: creating and optimizing digital experiences.
           </p>
         </section>
       </article>
 
       <article class="social">
         <header><AdressIcon/>Get in Touch</header>
-        <section>
-          <a href="https://www.instagram.com/minuttos_"></a>
-          <a href="https://www.linkedin.com/in/brittofernando"></a>
-          <a href="mailto:fernandobritto925@gmail.com"></a>
-          <a href="https://github.com/fernando925"></a>
+        <section class="socialContainer">
+          <div class="textSocial">
+             <p>Feel free to <b>get in touch anytime</b>!</p>
+             <p>Whether you have a question, an idea, or just want to chat, I’d love to hear from you.</p>
+          </div>
+          
+          <div class="linkSocials">
+              <a class="link" href="https://www.instagram.com/minuttos_"><InstaIcon/></a>
+              <a class="link" href="https://www.linkedin.com/in/brittofernando"><LinkedInIcon width="40px" height="40px" /></a>
+              <a class="link" href="mailto:fernandobritto925@gmail.com"><MailIcon width="40px" height="40px"/></a>
+              <a class="link" href="https://github.com/fernando925"><GitHubIcon width="40px" height="40px"/></a>
+          </div>
+          
         </section>
       </article>
 
@@ -200,6 +211,10 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
     font-weight: 400;
   }
 
+  /* strong{
+    color: #b86bff;
+  } */
+
   .textAbout :nth-child(2) {
     margin: 25px 0 15px;
   }
@@ -212,11 +227,47 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
   }
 
   .social {
-    grid-column: 1/4;
+    grid-column: 1/5;
+  }
+
+  .socialContainer{
+    font-size: 19px;
+    text-wrap: pretty;
+    color: #fafaf9f0;
+    font-family: "Satoshi";
+    font-weight: 500;
+  }
+
+  .textSocial{
+    margin-top: 30px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .linkSocials{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+  }
+
+  .link{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: .5s;
+    transition-duration: .5s;
+    border-radius: 10px;
+    &:hover{
+      background-color: #fafaf93a;
+      
+      
+    }
   }
 
   .location {
-    grid-column: 4/11;
+    grid-column: 5/11;
     padding: 0;
     overflow: hidden;
     height: 350px;

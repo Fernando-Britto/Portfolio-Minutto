@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Headerr from '../components/Headerr.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+import {getI18N} from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+	<Headerr/>
+	<main>
+		<Hero/>
+		<Projects/>
+		<About/>	
+	</main>
+	<Footer/>
+</Layout>
