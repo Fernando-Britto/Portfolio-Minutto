@@ -15,22 +15,25 @@ const i18n = getI18N({ currentLocale })
             <div class="header">
                 <div>   
                     <h1 class="titleHeader">{i18n.WELCOME}</h1> 
-                    <h3 class="subTitleHeader" ><strong>Front end</strong> developer.</h3>
+                    <h3 class="subTitleHeader"><strong>Front end</strong> developer.</h3>
                 </div>
                 <img src="/images/avatar2.jpg" alt="foto de avatar">
             </div>
-            <p>Trainee developer with <strong>+2 years of coding experience</strong>, currently <b>finishing a degree in Computer Systems Analysis</b>, and a video game content creator from Argentina. <strong>Eager to explore new opportunities</strong>.</p>
+            <div class="text_hero">
+                <p>{i18n['HERO_DESCRIPTION.1']}</p> <strong>{i18n['HERO_DESCRIPTION.2']}</strong> <p set:html={i18n['HERO_DESCRIPTION.3']}/> <strong>{i18n['HERO_DESCRIPTION.4']}</strong>
+            </div>
+              
         </div>
         <div class="CTA" >
             <div>
-                <h4 class="titleCTA" >Currently available for work. </h4>
-                <h5 class="subCTA">Let's collaborate!</h5>
+                <h4 class="titleCTA">{i18n.CTA_TITLE}</h4>
+                <h5 class="subCTA">{i18n.CTA_SUB}</h5>
             </div>
             <nav>
                 <a href="">
                     <div class="available">
                         <MailIcon width="17px" height="17px" /> 
-                        Contact me
+                        {i18n.BTN_CONTACT}
                     </div>
                 </a>
                 <a href="">
@@ -93,6 +96,7 @@ const i18n = getI18N({ currentLocale })
         margin: 120px 0 200px ;
         display: flex;
         max-width: 55rem;
+        width: 100%;
         flex-direction: column;
         gap: 50px;
     }
@@ -112,17 +116,21 @@ const i18n = getI18N({ currentLocale })
         font-size: 30px;
         margin-top: 5px;
     }
-    strong {
+    strong{
         color: #b86bff;
     }
-    p{
+
+    .text_hero{
         color: #fafaf9A6;
         font-family: "Satoshi";
         font-weight: 500;
-        font-size: 21px;
-        width: 100%;
-        margin-top: 50px;
+        font-size: 21px;   
     }
+
+    p{
+        display: inline;
+    }
+
     /* .hero{
         display: flex;
         flex-direction: row;
@@ -149,7 +157,7 @@ const i18n = getI18N({ currentLocale })
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 650px;
+        max-width: 750px;
     }
 
     nav{

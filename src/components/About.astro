@@ -7,89 +7,65 @@ import AdressIcon from "../../public/icons/AdressIcon.astro";
 import GitHubIcon from "../../public/icons/GitHubIcon.astro"
 import MailIcon from "../../public/icons/MailIcon.astro";
 import InstaIcon from "../../public/icons/InstaIcon.astro"
+import { getI18N } from "../i18n";
 
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <Layout>
   <section id="about" class="about-me">
-    <h2><AboutIcon width="45px" height="45px" />A Bit About Me</h2>
+    <h2> <AboutIcon width="45px" height="45px"/>{i18n.ABOUT}</h2>
     <div class="contenedor">
       <article class="experience">
-        <header> <LinkedInIcon width="30px" height="30px" /> Experience Outside Programming</header>
+        <header > <LinkedInIcon width="30px" height="30px"/><h3>{i18n.EXPERIENCE_TITLE}</h3> </header>
         <ul class="trabajos">
           <li class="trabajo">
             <div class="headerTrabajo">
-              <h3 class="titleTrabajo">Kitchen Assistant</h3>
-              <p>International Culinary Institute (2022)</p>
+              <h3 class="titleTrabajo">{i18n["3-JOB_TITLE"]}</h3>
+            <p>{i18n["3-JOB_SUBTITLE"]}</p>
             </div>
-            <p class="textTrabajo">
-              Assisted in kitchen operations and food preparation, <b>contributing to a top-tier culinary environment</b>.
-            </p>
+            <p class="textTrabajo" set:html={i18n["3-JOB_TEXT"]} />
+          </li>  
+
+          <li class="trabajo">
+            <div class="headerTrabajo">
+              <h3 class="titleTrabajo">{i18n["2-JOB_TITLE"]}</h3>
+            <p>{i18n["2-JOB_SUBTITLE"]}</p>
+            </div>
+            <p class="textTrabajo" set:html={i18n["2-JOB_TEXT"]} />
+            <p class="textTrabajo">{i18n["2B-JOB_TEXT"]}</p>
           </li>
 
           <li class="trabajo">
             <div class="headerTrabajo">
-              <h3 class="titleTrabajo">Branch Manager</h3>
-            <p>Polijub Café (2023)</p>
+              <h3 class="titleTrabajo">{i18n["1-JOB_TITLE"]}</h3>
+              <p>{i18n["1-JOB_SUBTITLE"]}</p>
             </div>
-            <p class="textTrabajo">
-              <b>Managed customer service operations and led a team</b>, achieving a promotion to branch manager within six months.
-            </p>
-            <p class="textTrabajo">
-              Oversaw daily activities and staff, enhancing overall service
-              efficiency.
-            </p>
-          </li>
-
-          <li class="trabajo">
-            <div class="headerTrabajo">
-              <h3 class="titleTrabajo">Content Creator</h3>
-            <p>Freelance (2024 - Present)</p>
-            </div>
-            <p class="textTrabajo">Collaborate with a team to produce and edit video content, focusing on <b>engaging and compelling visual material</b>.
-            </p>
+            <p class="textTrabajo" set:html={i18n["1-JOB_TEXT"]} />
           </li>
         </ul>
       </article>
 
       <article class="journey">
-        <header><RouteIcon/> My Journey in Programming</header>
+        <header><RouteIcon/><h3>{i18n.JOURNEY_TITLE}</h3></header>
         <section class="textAbout">
           <picture>
             <img class="yt" src="/images/Dev.png" alt="" />
           </picture>
-
-          <p>
-            I discovered programming exactly <strong>four years ago</strong> thanks to this
-            video.
-          </p>
-
-          <p>
-            Since then, I have been <strong>continuously learning</strong>, driven by an
-            insatiable curiosity about how websites function and a <strong>deep passion
-            for the field</strong>.
-          </p>
-
-          <p>
-            To complement my front-end development skills, <strong>I studied graphic
-            design</strong>, which has allowed me to better understand the aesthetics and
-            functionality of websites.
-          </p>
-
-          <p>
-            Currently, I am completing my <strong>degree in Systems Analysis</strong> and am
-            looking for a job that will allow me to dedicate to what truly
-            excites me: creating and optimizing digital experiences.
-          </p>
+          <p set:html={i18n["1-JOURNEY_TEXT"]} />
+          <p set:html={i18n["2-JOURNEY_TEXT"]} />
+          <p set:html={i18n["3-JOURNEY_TEXT"]} />
+          <p set:html={i18n["4-JOURNEY_TEXT"]} />
         </section>
       </article>
 
       <article class="social">
-        <header><AdressIcon/>Get in Touch</header>
+        <header><AdressIcon/><h3>{i18n.CONTACT_TITLE}</h3></header>
         <section class="socialContainer">
           <div class="textSocial">
-             <p>Feel free to <b>get in touch anytime</b>!</p>
-             <p>Whether you have a question, an idea, or just want to chat, I’d love to hear from you.</p>
+             <p set:html={i18n["1-CONTACT_TEXT"]}/>
+             <p>{i18n["2-CONTACT_TEXT"]}</p>
           </div>
           
           <div class="linkSocials">
@@ -146,7 +122,7 @@ import InstaIcon from "../../public/icons/InstaIcon.astro"
 
   header {
     color: #b86bff;
-    font-size: 30px;
+    font-size: clamp(1.2rem, calc(.6rem + 1.05vw), 1.85rem);
     font-family: "Satoshi";
     font-weight: 700;
     display: flex;
@@ -173,7 +149,7 @@ import InstaIcon from "../../public/icons/InstaIcon.astro"
     display: flex;
     gap: 10px;
     align-items: center;
-    font-size: 21px;
+    font-size: clamp(.1rem,calc(.8rem + .36316vw), 1.5rem);
   }
 
   .titleTrabajo {
@@ -206,14 +182,14 @@ import InstaIcon from "../../public/icons/InstaIcon.astro"
   .textAbout {
     font-size: 19px;
     text-wrap: pretty;
-    color: #fafaf9f0;
+    color: #fafaf9c2;
     font-family: "Satoshi";
     font-weight: 400;
   }
 
-  /* strong{
+  strong{
     color: #b86bff;
-  } */
+  }
 
   .textAbout :nth-child(2) {
     margin: 25px 0 15px;
@@ -251,6 +227,7 @@ import InstaIcon from "../../public/icons/InstaIcon.astro"
   }
 
   .link{
+    color: #b86bff;
     width: 50px;
     height: 50px;
     display: flex;
@@ -260,7 +237,7 @@ import InstaIcon from "../../public/icons/InstaIcon.astro"
     transition-duration: .5s;
     border-radius: 10px;
     &:hover{
-      background-color: #fafaf93a;
+      background-color: rgba(69, 41, 95, 0.6);
       
       
     }

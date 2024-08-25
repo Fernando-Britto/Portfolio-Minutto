@@ -3,14 +3,34 @@ import AboutIcon from "../../public/icons/AboutIcon.astro"
 import CodeIcon from "../../public/icons/CodeIcon.astro"
 import LenguajeIcon from "../../public/icons/LenguajeIcon.astro"
 import MailIcon from "../../public/icons/MailIcon.astro"
+import {getI18N} from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+import { LANGUAGES } from '../i18n/ui';
+import { getRouteFromUrl, useTranslatedPath, getLangFromUrl } from '../i18n/utils';
+
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const currentLocaleData = LANGUAGES[lang]
+const otherLocales = Object.values(LANGUAGES).filter(
+  (locale) => locale.code !== lang)
+
 ---
 
 <header>
     <nav>
-        <a href="#proyects"><CodeIcon width="16px" height="16px" /> Proyects</a>
-        <a href="#about"><AboutIcon width="16px" height="16px" /> About me</a>
-        <a href="#contact"> <MailIcon width="16px" height="16px"/> </> Contact</a>
-        <button><LenguajeIcon/>Eng</button>
+        <a href="#proyects"><CodeIcon width="16px" height="16px" />{i18n["NAV.PROYECT"]}</a>
+        <a href="#about"><AboutIcon width="16px" height="16px" /> {i18n["NAV.ABOUT"]}</a>
+        <a href="#contact"> <MailIcon width="16px" height="16px"/> </> {i18n["NAV.CONTACT"]}</a>
+        {
+            otherLocales.map((locale) => (
+                <a href={translatePath(`/${route ? route : ''}`, locale.code)}><LenguajeIcon/>{currentLocaleData.name}</a>         
+            ))
+        } 
     </nav>
 </header>
 

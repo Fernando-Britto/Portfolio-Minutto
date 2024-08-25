@@ -3,24 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import CodeIcon from "../../public/icons/CodeIcon.astro";
 import GitHubIcon from "../../public/icons/GitHubIcon.astro";
 import LinkIcon from "../../public/icons/LinkIcon.astro"
+import {getI18N} from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <Layout>
     <section id="proyects" >
-        <h2> <CodeIcon width="45px" height="45px" /> My favorite projects</h2>
+        <h2 ><CodeIcon width="45px" height="45px"/>{i18n.PROYECTS}</h2>
         <ul id="cards" >
             <li class="card" id="card_1" >
                 <div class="card__content" >
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
-                                <h3 class="TitleProyect" >Card One</h3>
-                                <a href=""><GitHubIcon width="24px" height="24px" />Code</a>
-                                <a href=""><LinkIcon/>Preview</a>
+                                <h3 class="TitleProyect">{i18n["1-TITLE_PROJECT"]}</h3>
+                                <a href="" > <GitHubIcon width="24px" height="24px"/>{i18n["1-BTN_CODE"]}</a>
+                                <a href="" > <LinkIcon/>{i18n["1-BTN_PREVIEW"]}</a>
                             </div>
-                            <h4 class="SubProyect" >Subtitle</h4>
+                            <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                        <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
                 </div>
@@ -30,13 +34,13 @@ import LinkIcon from "../../public/icons/LinkIcon.astro"
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
-                                <h3 class="TitleProyect" >Card One</h3>
-                                <a href=""><GitHubIcon/>Code</a>
-                                <a href=""><LinkIcon/>Preview</a>
+                                <h3 class="TitleProyect">{i18n["1-TITLE_PROJECT"]}</h3>
+                                <a href="" > <GitHubIcon width="24px" height="24px"/>{i18n["1-BTN_CODE"]}</a>
+                                <a href="" > <LinkIcon/>{i18n["1-BTN_PREVIEW"]}</a>
                             </div>
-                            <h4 class="SubProyect" >Subtitle</h4>
+                            <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                        <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
                 </div>
@@ -46,13 +50,13 @@ import LinkIcon from "../../public/icons/LinkIcon.astro"
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
-                                <h3 class="TitleProyect" >Card One</h3>
-                                <a href=""><GitHubIcon/>Code</a>
-                                <a href=""><LinkIcon/>Preview</a>
+                                <h3 class="TitleProyect">{i18n["1-TITLE_PROJECT"]}</h3>
+                                <a href="" > <GitHubIcon width="24px" height="24px"/>{i18n["1-BTN_CODE"]}</a>
+                                <a href="" > <LinkIcon/>{i18n["1-BTN_PREVIEW"]}</a>
                             </div>
-                            <h4 class="SubProyect" >Subtitle</h4>
+                            <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                        <p>{i18n["1-TEXT_PROJECT"]}</p>  
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
                 </div>
@@ -62,13 +66,13 @@ import LinkIcon from "../../public/icons/LinkIcon.astro"
                     <div class="text__content">
                         <header>
                             <div class="contenedorTitle" >
-                                <h3 class="TitleProyect" >Card One</h3>
-                                <a href=""><GitHubIcon/>Code</a>
-                                <a href=""><LinkIcon/>Preview</a>
-                             </div>
-                            <h4 class="SubProyect" >Subtitle</h4>
+                                <h3 class="TitleProyect">{i18n["1-TITLE_PROJECT"]}</h3>
+                                <a href="" > <GitHubIcon width="24px" height="24px"/>{i18n["1-BTN_CODE"]}</a>
+                                <a href="" > <LinkIcon/>{i18n["1-BTN_PREVIEW"]}</a>
+                            </div>
+                            <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                        <p>{i18n["1-TEXT_PROJECT"]}</p> 
                     </div>
                     <figure><img src="/images/img-1.jpg" alt=""></figure>
                 </div>
