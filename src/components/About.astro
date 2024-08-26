@@ -50,9 +50,6 @@ const i18n = getI18N({ currentLocale })
       <article class="journey">
         <header><RouteIcon/><h3>{i18n.JOURNEY_TITLE}</h3></header>
         <section class="textAbout">
-          <picture>
-            <img class="yt" src="/images/Dev.png" alt="" />
-          </picture>
           <p set:html={i18n["1-JOURNEY_TEXT"]} />
           <p set:html={i18n["2-JOURNEY_TEXT"]} />
           <p set:html={i18n["3-JOURNEY_TEXT"]} />
@@ -97,8 +94,6 @@ const i18n = getI18N({ currentLocale })
   }
 
   h2 {
-    color: #fafaf9;
-    font-family: "Satoshi";
     font-weight: 700;
     font-size: 35px;
     align-self: center;
@@ -122,8 +117,7 @@ const i18n = getI18N({ currentLocale })
 
   header {
     color: #b86bff;
-    font-size: clamp(1.2rem, calc(.6rem + 1.05vw), 1.85rem);
-    font-family: "Satoshi";
+    font-size: clamp(1.2rem, calc(.9rem + 1.05vw), 1.72rem);
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -138,10 +132,14 @@ const i18n = getI18N({ currentLocale })
   }
 
 
-  .trabajo {
-    color: #fafaf9f0;
-    font-family: "Satoshi";
+  .trabajos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
     margin-top: 30px;
+    height: 100%;
+    color: #fafaf9f0;
   }
 
   .headerTrabajo{
@@ -149,22 +147,21 @@ const i18n = getI18N({ currentLocale })
     display: flex;
     gap: 10px;
     align-items: center;
-    font-size: clamp(.1rem,calc(.8rem + .36316vw), 1.5rem);
+    font-size: clamp(1rem,calc(1.05rem + .35vw),1.5rem);
   }
 
   .titleTrabajo {
-    font-family: "Satoshi";
-    font-weight: 700;
+    font-weight: 700;  
     
-  }
-  .titleTrabajo::after{
+    &::after{
     color: rgba(255, 255, 255, 0.3);
     content: " | ";
     margin-left: 5px;
+    }
   }
 
   .textTrabajo {
-    font-size: 18px;
+    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.2rem);
     margin-top: 5px;
     font-weight:400;
   }
@@ -180,11 +177,11 @@ const i18n = getI18N({ currentLocale })
   }
 
   .textAbout {
-    font-size: 19px;
+    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.2rem);
     text-wrap: pretty;
-    color: #fafaf9c2;
-    font-family: "Satoshi";
+    color: #fafaf9e0;
     font-weight: 400;
+    margin-top: 30px;
   }
 
   strong{
@@ -210,7 +207,6 @@ const i18n = getI18N({ currentLocale })
     font-size: 19px;
     text-wrap: pretty;
     color: #fafaf9f0;
-    font-family: "Satoshi";
     font-weight: 500;
   }
 
