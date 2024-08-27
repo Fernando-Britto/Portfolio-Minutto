@@ -9,6 +9,8 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href="/Fonts/Satoshi/satoshi.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="/Fonts/Onest/onest.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
