@@ -59,7 +59,7 @@ const i18n = getI18N({ currentLocale })
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom:4rem;
     }
 
     img{
@@ -73,7 +73,7 @@ const i18n = getI18N({ currentLocale })
         justify-content: center;
         border-radius: 7px;
         font-weight: 700;
-        font-size: 15px;
+        font-size: clamp(.8888888888888888rem, calc(.85965rem + .1462vw), 1rem);
         color: #b86bff;
         border: solid 1px rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
@@ -92,17 +92,17 @@ const i18n = getI18N({ currentLocale })
     }
     
     section{
-        margin: 120px 0 200px ;
+        margin: 4rem 0 200px ;
         display: flex;
         max-width: 55rem;
         width: 100%;
         flex-direction: column;
-        gap: 50px;
+        gap: 60px;
     }
     .titleHeader{
         font-family: "Onest";
         font-weight: 800;
-        font-size: 45px;
+        font-size: clamp(1.802032470703125rem, calc(1.49047rem + 1.55783vw), 2.9859839999999993rem);
         opacity: .9;
     }
     
@@ -110,7 +110,7 @@ const i18n = getI18N({ currentLocale })
     .subTitleHeader{
         color: #fafaf980;
         font-weight: 700; 
-        font-size: 30px;
+        font-size: clamp(1.423828125rem, calc(1.25284rem + .85496vw), 2.0735999999999994rem);
         margin-top: 5px;
     }
     strong{
@@ -120,7 +120,7 @@ const i18n = getI18N({ currentLocale })
     .text_hero{
         color: #fafaf9A6;
         font-weight: 500;
-        font-size: 21px;   
+        font-size: clamp(1.125rem, calc(1.04211rem + .41447vw), 1.44rem);   
     }
 
     p{
@@ -138,13 +138,13 @@ const i18n = getI18N({ currentLocale })
     .titleCTA{
         color: #fafaf9c7;
         font-weight: 700; 
-        font-size: 25px;
+        font-size: clamp(1.423828125rem,calc(1rem + .5496vw),1.6rem);
     } 
 
     .subCTA{
         color: #fafaf980;
         font-weight: 400; 
-        font-size: 19px;
+        font-size: clamp(1.125rem, calc(.9rem + .41447vw), 1.3rem);
     }
 
     .CTA{

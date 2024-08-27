@@ -90,7 +90,7 @@ section{
 
 h2{
     font-weight: 700; 
-    font-size: 35px;
+    font-size: clamp(1.423828125rem, calc(1.3rem + .85496vw), 2.2rem);
     position: sticky;
     top: 100px;
     align-self: center;
@@ -109,6 +109,13 @@ section{
     margin-bottom: 350px;
 }
 
+@supports(animation-timeline: scroll()){
+    .card__content{
+        animation: linear scale forwards;
+	    animation-timeline: --cards-element-scrolls-in-body;
+	    animation-range: entry-crossing var(--start-range) exit-crossing var(--end-range);
+    }
+}
 #card_1{
     --index:1;
 }
@@ -164,9 +171,7 @@ section{
 	--start-range: calc(var(--index0) / var(--numcards) * 100% + 53% );
 	--end-range: calc(var(--index) / var(--numcards) * 100% - 5% );
 
-	animation: linear scale forwards;
-	animation-timeline: --cards-element-scrolls-in-body;
-	animation-range: entry-crossing var(--start-range) exit-crossing var(--end-range);
+	
 }
 
 .text__content{

@@ -65,11 +65,11 @@ const i18n = getI18N({ currentLocale })
              <p>{i18n["2-CONTACT_TEXT"]}</p>
           </div>
           
-          <div class="linkSocials">
+          <div id="contact" class="linkSocials">
               <a class="link" href="https://www.instagram.com/minuttos_"><InstaIcon/></a>
               <a class="link" href="https://www.linkedin.com/in/brittofernando"><LinkedInIcon width="40px" height="40px" /></a>
               <a class="link" href="mailto:fernandobritto925@gmail.com"><MailIcon width="40px" height="40px"/></a>
-              <a class="link" href="https://github.com/fernando925"><GitHubIcon width="40px" height="40px"/></a>
+              <a class="link" href="https://github.com/Fernando-Britto"><GitHubIcon width="40px" height="40px"/></a>
           </div>
           
         </section>
@@ -95,7 +95,7 @@ const i18n = getI18N({ currentLocale })
 
   h2 {
     font-weight: 700;
-    font-size: 35px;
+    font-size: clamp(1.423828125rem, calc(1.3rem + .85496vw), 2.2rem);
     align-self: center;
     display: flex;
     align-items: center;
@@ -168,35 +168,25 @@ const i18n = getI18N({ currentLocale })
 
   .journey {
     grid-column: 6/11;
-  }
-
-  .yt {
-    float: right;
-    max-width: 220px;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    text-wrap: pretty;
   }
 
   .textAbout {
-    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.2rem);
-    text-wrap: pretty;
+    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.3rem);
     color: #fafaf9e0;
     font-weight: 400;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+    height: 100%;
   }
 
   strong{
     color: #b86bff;
-  }
-
-  .textAbout :nth-child(2) {
-    margin: 25px 0 15px;
-  }
-
-  .textAbout :nth-child(3){
-    margin-bottom: 15px;
-  }
-  .textAbout :nth-child(4){
-    margin-bottom: 15px;
   }
 
   .social {
@@ -204,7 +194,6 @@ const i18n = getI18N({ currentLocale })
   }
 
   .socialContainer{
-    font-size: 19px;
     text-wrap: pretty;
     color: #fafaf9f0;
     font-weight: 500;
@@ -214,6 +203,7 @@ const i18n = getI18N({ currentLocale })
     margin-top: 30px;
     display: grid;
     gap: 10px;
+    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.2rem);
   }
 
   .linkSocials{
@@ -251,6 +241,7 @@ const i18n = getI18N({ currentLocale })
   .country {
     position: absolute;
     background: #fafaf9b1;
+    font-size: clamp(.8888888888888888rem, calc(.85965rem + .1462vw), 1rem);
     color: black;
     border-radius: 0.75rem;
     align-self: end;
