@@ -1,35 +1,15 @@
-// export const LANGUAGES = {
-//     en: 'English',
-//     es: 'Español',
-//   };
-  
-//   export const defaultLang = 'en';
-  
-//   export const ui = {
-//     en: {
-//       'nav.home': 'Home',
-//       'nav.about': 'About',
-//       'nav.twitter': 'Twitter',
-//     },
-//     es: {
-//       'nav.home': 'Accueil',
-//       'nav.about': 'À propos',
-//     },
-//   } as const;
-
-
   export const LANGUAGES: Record<
 	string,
 	{ code: string; name: string;}
 > = {
 	en: {
 		code: 'en',
-		name: 'English',
+		name: 'ENG',
 		
 	},
 	es: {
 		code: 'es',
-		name: 'Español',
+		name: 'ESP',
 	},
 };
 

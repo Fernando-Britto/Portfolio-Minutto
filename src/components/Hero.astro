@@ -9,10 +9,10 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 <Layout>
-    <section class="hero mb-[10rem] mt-16 sm:mb-[12.5rem] mx-0" >
-        <div class="hero">
+    <section class="hero pb-[11rem] md:pb-[15rem]" >
+        <div>
             
-            <div class="header flex flex-col-reverse  gap-[15px] sm:flex-row sm:gap-0 justify-between items-start">
+            <div class="header flex flex-col-reverse py-11 md:py-24 gap-[15px] sm:flex-row sm:gap-0 justify-between items-start">
                 <div>   
                     <h1 class="titleHeader">{i18n.WELCOME}</h1> 
                     <h3 class="subTitleHeader"><strong>Front end</strong> developer.</h3>
@@ -24,7 +24,7 @@ const i18n = getI18N({ currentLocale })
             </div>
               
         </div>
-        <div class="CTA gap-[10px] sm:gap-[40px] " >
+        <div class="CTA gap-[10px] sm:gap-[40px] pt-10 md:pt-20 " >
             <div>
                 <h4 class="titleCTA">{i18n.CTA_TITLE}</h4>
                 <h5 class="subCTA">{i18n.CTA_SUB}</h5>
@@ -32,7 +32,7 @@ const i18n = getI18N({ currentLocale })
             <nav>
                 <a href="">
                     <div class="available">
-                        <MailIcon width="17px" height="17px" /> 
+                        <MailIcon size="iconCTA" /> 
                         {i18n.BTN_CONTACT}
                     </div>
                 </a>
@@ -56,7 +56,6 @@ const i18n = getI18N({ currentLocale })
 
     .header{
         max-width: 52rem;
-        margin-bottom:3rem;
     }
 
     img{
@@ -93,7 +92,6 @@ const i18n = getI18N({ currentLocale })
         max-width: 55rem;
         width: 100%;
         flex-direction: column;
-        gap: 60px;
     }
     .titleHeader{
         font-family: "Onest";
