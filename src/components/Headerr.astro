@@ -23,12 +23,12 @@ const otherLocales = Object.values(LANGUAGES).filter(
 
 <header>
     <nav>
-        <a href="#proyects"><CodeIcon width="16px" height="16px" />{i18n["NAV.PROYECT"]}</a>
-        <a href="#about"><AboutIcon width="16px" height="16px" /> {i18n["NAV.ABOUT"]}</a>
-        <a href="#contact"> <MailIcon width="16px" height="16px"/> </> {i18n["NAV.CONTACT"]}</a>
+        <a href="#proyects"><CodeIcon width="16px" height="16px"/><span >{i18n["NAV.PROYECT"]}</span></a>
+        <a href="#about"><AboutIcon width="16px" height="16px" /><span >{i18n["NAV.ABOUT"]}</span></a>
+        <a href="#contact"><MailIcon width="16px" height="16px"/><span >{i18n["NAV.CONTACT"]}</span></a>
         {
             otherLocales.map((locale) => (
-                <a href={translatePath(`/${route ? route : ''}`, locale.code)}><LenguajeIcon/>{currentLocaleData.name}</a>         
+                <a href={translatePath(`/${route ? route : ''}`, locale.code)}><LenguajeIcon/><span >{currentLocaleData.name}</span></a>         
             ))
         } 
     </nav>
@@ -60,7 +60,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
     }
 
 
-    a, button {
+    a{
         display: flex;
         align-items: center;
         gap: 5px;

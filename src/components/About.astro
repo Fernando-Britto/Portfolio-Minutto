@@ -17,20 +17,20 @@ const i18n = getI18N({ currentLocale })
   <section id="about" class="about-me">
     <h2> <AboutIcon width="45px" height="45px"/>{i18n.ABOUT}</h2>
     <div class="contenedor">
-      <article class="experience">
+      <article  class="p-6 md:p-8 flex flex-col col-span-10 sm:col-span-5" >
         <header > <LinkedInIcon width="30px" height="30px"/><h3>{i18n.EXPERIENCE_TITLE}</h3> </header>
         <ul class="trabajos">
           <li class="trabajo">
-            <div class="headerTrabajo">
-              <h3 class="titleTrabajo">{i18n["3-JOB_TITLE"]}</h3>
+            <div class="headerTrabajo flex flex-col lg:flex-row items-start" >
+              <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block" >{i18n["3-JOB_TITLE"]}</h3>
             <p>{i18n["3-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["3-JOB_TEXT"]} />
           </li>  
 
           <li class="trabajo">
-            <div class="headerTrabajo">
-              <h3 class="titleTrabajo">{i18n["2-JOB_TITLE"]}</h3>
+            <div class="headerTrabajo flex flex-col lg:flex-row items-start">
+              <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block">{i18n["2-JOB_TITLE"]}</h3>
             <p>{i18n["2-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["2-JOB_TEXT"]} />
@@ -38,8 +38,8 @@ const i18n = getI18N({ currentLocale })
           </li>
 
           <li class="trabajo">
-            <div class="headerTrabajo">
-              <h3 class="titleTrabajo">{i18n["1-JOB_TITLE"]}</h3>
+            <div class="headerTrabajo flex flex-col lg:flex-row items-start">
+              <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block">{i18n["1-JOB_TITLE"]}</h3>
               <p>{i18n["1-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["1-JOB_TEXT"]} />
@@ -47,7 +47,7 @@ const i18n = getI18N({ currentLocale })
         </ul>
       </article>
 
-      <article class="journey">
+      <article class="p-6 md:p-8 flex flex-col col-span-10 sm:col-span-5">
         <header><RouteIcon/><h3>{i18n.JOURNEY_TITLE}</h3></header>
         <section class="textAbout">
           <p set:html={i18n["1-JOURNEY_TEXT"]} />
@@ -57,7 +57,7 @@ const i18n = getI18N({ currentLocale })
         </section>
       </article>
 
-      <article class="social">
+      <article class="p-6 md:p-8 flex flex-col col-span-10 sm:col-span-4">
         <header><AdressIcon/><h3>{i18n.CONTACT_TITLE}</h3></header>
         <section class="socialContainer">
           <div class="textSocial">
@@ -75,7 +75,7 @@ const i18n = getI18N({ currentLocale })
         </section>
       </article>
 
-      <article class="location">
+      <article class="col-span-10 sm:col-span-6 overflow-hidden p-[0px] h-[350px] grid justify-end ">
         <div class="country">Misiones, Argentina</div>
         <img src="/images/world.webp" alt="" />
         <div class="circle"></div>
@@ -91,6 +91,7 @@ const i18n = getI18N({ currentLocale })
     flex-direction: column;
     gap: 40px;
     margin-bottom: 250px;
+    text-wrap: pretty;
   }
 
   h2 {
@@ -112,31 +113,30 @@ const i18n = getI18N({ currentLocale })
   article {
     border: solid 1px rgba(255, 255, 255, 0.2);
     border-radius: 0.75rem;
-    padding: 35px;
   }
 
   header {
     color: #b86bff;
-    font-size: clamp(1.2rem, calc(.9rem + 1.05vw), 1.72rem);
+    font-size: clamp(1.2rem, calc(1.1rem + 1.05vw), 1.72rem);
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  .experience {
+  /* .experience {
     grid-column: 1/6;
     display: flex;
     flex-direction: column;
     text-wrap: pretty;
-  }
+  } */
 
 
   .trabajos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 40px;
+    gap: 2rem;
     margin-top: 30px;
     height: 100%;
     color: #fafaf9f0;
@@ -146,7 +146,6 @@ const i18n = getI18N({ currentLocale })
     color: #b86bff;
     display: flex;
     gap: 10px;
-    align-items: center;
     font-size: clamp(1rem,calc(1.05rem + .35vw),1.5rem);
   }
 
@@ -155,7 +154,6 @@ const i18n = getI18N({ currentLocale })
     
     &::after{
     color: rgba(255, 255, 255, 0.3);
-    content: " | ";
     margin-left: 5px;
     }
   }
@@ -166,12 +164,12 @@ const i18n = getI18N({ currentLocale })
     font-weight:400;
   }
 
-  .journey {
+  /* .journey {
     grid-column: 6/11;
     display: flex;
     flex-direction: column;
     text-wrap: pretty;
-  }
+  } */
 
   .textAbout {
     font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.3rem);
@@ -208,8 +206,9 @@ const i18n = getI18N({ currentLocale })
 
   .linkSocials{
     margin-top: 30px;
-    display: flex;
-    gap: 30px;
+    display: flex;    
+    max-width: 19rem;
+    justify-content: space-between;
   }
 
   .link{
@@ -224,8 +223,6 @@ const i18n = getI18N({ currentLocale })
     border-radius: 10px;
     &:hover{
       background-color: rgba(69, 41, 95, 0.6);
-      
-      
     }
   }
 
