@@ -14,7 +14,7 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Layout>
-  <section id="about" class="about-me">
+  <section id="about" class="about-me mb-[10rem] sm:mb-[12.5rem] mx-0">
     <h2> <AboutIcon width="45px" height="45px"/>{i18n.ABOUT}</h2>
     <div class="contenedor">
       <article  class="p-6 md:p-8 flex flex-col col-span-10 sm:col-span-5" >
@@ -23,7 +23,7 @@ const i18n = getI18N({ currentLocale })
           <li class="trabajo">
             <div class="headerTrabajo flex flex-col lg:flex-row items-start" >
               <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block" >{i18n["3-JOB_TITLE"]}</h3>
-            <p>{i18n["3-JOB_SUBTITLE"]}</p>
+            <p class="subTrabajo">{i18n["3-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["3-JOB_TEXT"]} />
           </li>  
@@ -31,7 +31,7 @@ const i18n = getI18N({ currentLocale })
           <li class="trabajo">
             <div class="headerTrabajo flex flex-col lg:flex-row items-start">
               <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block">{i18n["2-JOB_TITLE"]}</h3>
-            <p>{i18n["2-JOB_SUBTITLE"]}</p>
+            <p class="subTrabajo" >{i18n["2-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["2-JOB_TEXT"]} />
             <p class="textTrabajo">{i18n["2B-JOB_TEXT"]}</p>
@@ -40,7 +40,7 @@ const i18n = getI18N({ currentLocale })
           <li class="trabajo">
             <div class="headerTrabajo flex flex-col lg:flex-row items-start">
               <h3 class="titleTrabajo lg:after:content-['|'] lg:after:ml-2 lg:after:inline-block">{i18n["1-JOB_TITLE"]}</h3>
-              <p>{i18n["1-JOB_SUBTITLE"]}</p>
+              <p class="subTrabajo" >{i18n["1-JOB_SUBTITLE"]}</p>
             </div>
             <p class="textTrabajo" set:html={i18n["1-JOB_TEXT"]} />
           </li>
@@ -90,7 +90,6 @@ const i18n = getI18N({ currentLocale })
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 250px;
     text-wrap: pretty;
   }
 
@@ -146,20 +145,23 @@ const i18n = getI18N({ currentLocale })
     color: #b86bff;
     display: flex;
     gap: 10px;
-    font-size: clamp(1rem,calc(1.05rem + .35vw),1.5rem);
   }
 
   .titleTrabajo {
     font-weight: 700;  
-    
+    font-size: clamp(1.25rem, calc(1.05rem + .35vw), 1.5rem);
     &::after{
     color: rgba(255, 255, 255, 0.3);
     margin-left: 5px;
     }
   }
 
+  .subTrabajo{
+    font-size: clamp(1.14rem,calc(.9rem + .5vw),1.5rem);
+  }
+
   .textTrabajo {
-    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.2rem);
+    font-size: clamp(1.08rem,calc(.94737rem + .26316vw),1.2rem);
     margin-top: 5px;
     font-weight:400;
   }
@@ -172,7 +174,7 @@ const i18n = getI18N({ currentLocale })
   } */
 
   .textAbout {
-    font-size: clamp(1rem, calc(.94737rem + .26316vw), 1.3rem);
+    font-size: clamp(1.05rem,calc(.94737rem + .26316vw),1.3rem);
     color: #fafaf9e0;
     font-weight: 400;
     margin-top: 30px;

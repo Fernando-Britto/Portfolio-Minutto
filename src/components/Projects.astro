@@ -12,9 +12,9 @@ const i18n = getI18N({ currentLocale })
 <Layout>
     <section id="proyects" >
         <h2 ><CodeIcon width="45px" height="45px"/>{i18n.PROYECTS}</h2>
-        <ul id="cards" >
+        <ul id="cards" class=" gap-[200px] sm:gap-[100px]" >
             <li class="card" id="card_1" >
-                <div class="card__content" >
+                <div class="card__content flex-col-reverse sm:flex-row" >
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
@@ -26,11 +26,11 @@ const i18n = getI18N({ currentLocale })
                         </header>
                         <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
-                    <figure><img src="/images/img-1.jpg" alt=""></figure>
+                    <figure ><img class="w-full h-[200px] sm:h-[350px]" src="/images/img-1.jpg" alt=""></figure>
                 </div>
             </li>
             <li class="card" id="card_2" >
-                <div class="card__content">
+                <div class="card__content flex-col-reverse sm:flex-row" >
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
@@ -42,11 +42,11 @@ const i18n = getI18N({ currentLocale })
                         </header>
                         <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
-                    <figure><img src="/images/img-1.jpg" alt=""></figure>
+                    <figure ><img class="w-full h-[200px] sm:h-[350px]" src="/images/img-1.jpg" alt=""></figure>
                 </div>
             </li>
             <li class="card" id="card_3">
-                <div class="card__content">
+                <div class="card__content flex-col-reverse sm:flex-row" >
                     <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
@@ -56,14 +56,14 @@ const i18n = getI18N({ currentLocale })
                             </div>
                             <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>{i18n["1-TEXT_PROJECT"]}</p>  
+                        <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
-                    <figure><img src="/images/img-1.jpg" alt=""></figure>
+                    <figure ><img class="w-full h-[200px] sm:h-[350px]" src="/images/img-1.jpg" alt=""></figure>
                 </div>
             </li>
             <li class="card" id="card_4" >
-                <div class="card__content" >
-                    <div class="text__content">
+                <div class="card__content flex-col-reverse sm:flex-row" >
+                    <div class="text__content" >
                         <header>
                             <div class="contenedorTitle" >
                                 <h3 class="TitleProyect">{i18n["1-TITLE_PROJECT"]}</h3>
@@ -72,9 +72,9 @@ const i18n = getI18N({ currentLocale })
                             </div>
                             <h4 class="SubProyect">{i18n["1-SUBTITLE_PROJECT"]}</h4>
                         </header>
-                        <p>{i18n["1-TEXT_PROJECT"]}</p> 
+                        <p>{i18n["1-TEXT_PROJECT"]}</p>
                     </div>
-                    <figure><img src="/images/img-1.jpg" alt=""></figure>
+                    <figure ><img class="w-full h-[200px] sm:h-[350px]" src="/images/img-1.jpg" alt=""></figure>
                 </div>
             </li>
         </ul>
@@ -99,10 +99,6 @@ h2{
     gap: 10px;
 }
 
-img{
-    width: 400px;
-    height: 100%;
-}
 
 section{
     max-width: 80rem;
@@ -134,7 +130,7 @@ section{
     position: sticky;
     top:150px;
     padding-top: calc(var(--index)* 2em);
-
+    height: 400px
 ;
 	--index0: calc(var(--index) - 1); /* 0-based index */
 	--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
@@ -149,10 +145,8 @@ section{
 }
 
 #cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 100px;
-    grid-template-rows: repeat(var(--numcards), 400px);
+    display: flex;
+    flex-direction: column;
 	--numcards: 4;
 	view-timeline-name: --cards-element-scrolls-in-body;
 }

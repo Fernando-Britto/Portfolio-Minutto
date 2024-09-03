@@ -9,7 +9,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 <Layout>
-    <section>
+    <section class="hero mb-[10rem] mt-16 sm:mb-[12.5rem] mx-0" >
         <div class="hero">
             
             <div class="header flex flex-col-reverse  gap-[15px] sm:flex-row sm:gap-0 justify-between items-start">
@@ -24,7 +24,7 @@ const i18n = getI18N({ currentLocale })
             </div>
               
         </div>
-        <div class="CTA" >
+        <div class="CTA gap-[10px] sm:gap-[40px] " >
             <div>
                 <h4 class="titleCTA">{i18n.CTA_TITLE}</h4>
                 <h5 class="subCTA">{i18n.CTA_SUB}</h5>
@@ -88,8 +88,7 @@ const i18n = getI18N({ currentLocale })
     border-color: transparent;
     }
     
-    section{
-        margin: 4rem 0 200px ;
+    .hero{
         display: flex;
         max-width: 55rem;
         width: 100%;
@@ -147,12 +146,14 @@ const i18n = getI18N({ currentLocale })
     .CTA{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
-        max-width: 750px;
+        max-width: 47rem;
     }
 
     nav{
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
     }
 </style>
