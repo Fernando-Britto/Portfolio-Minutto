@@ -1,9 +1,9 @@
 ---
 import AboutIcon from "../../public/icons/AboutIcon.astro"
-import Chevron from "../../public/icons/chevron.astro"
 import CodeIcon from "../../public/icons/CodeIcon.astro"
 import LenguajeIcon from "../../public/icons/LenguajeIcon.astro"
 import MailIcon from "../../public/icons/MailIcon.astro"
+import ChevronIcon from "../../public/icons/ChevronIcon.astro"
 import {getI18N} from "../i18n"
 
 const { currentLocale } = Astro
@@ -29,7 +29,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
         <a href="#contact"><MailIcon size="iconHeader" class="hidden sm:inline"/>{i18n["NAV.CONTACT"]}</a>
         {
             otherLocales.map((locale) => (
-                <a href={translatePath(`/${route ? route : ''}`, locale.code)}><LenguajeIcon size="iconHeader" class="hidden sm:inline"/>{currentLocaleData.name}<Chevron/></a>         
+                <a href={translatePath(`/${route ? route : ''}`, locale.code)}><LenguajeIcon size="iconHeader" class="hidden sm:inline"/>{currentLocaleData.name}<ChevronIcon/></a>         
             ))
         } 
     </nav>
