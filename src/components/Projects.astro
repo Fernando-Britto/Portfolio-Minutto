@@ -92,7 +92,7 @@ h2{
     font-weight: 700; 
     font-size: clamp(1.423828125rem, calc(1.3rem + .85496vw), 2.2rem);
     position: sticky;
-    top: 100px;
+    top: 50px;
     align-self: center;
     align-items: center;
     display: flex;
@@ -105,13 +105,6 @@ section{
     margin-bottom: 350px;
 }
 
-@supports(animation-timeline: scroll()){
-    .card__content{
-        animation: linear scale forwards;
-	    animation-timeline: --cards-element-scrolls-in-body;
-	    animation-range: entry-crossing var(--start-range) exit-crossing var(--end-range);
-    }
-}
 #card_1{
     --index:1;
 }
@@ -128,8 +121,8 @@ section{
 
 .card {
     position: sticky;
-    top:150px;
-    padding-top: calc(var(--index)* 2em);
+    top:90px;
+    padding-top: calc(var(--index)* 2vh);
     height: 400px
 ;
 	--index0: calc(var(--index) - 1); /* 0-based index */
@@ -162,8 +155,8 @@ section{
     transform-origin: 50% 0%;
     will-change: transform;
 
-	--start-range: calc(var(--index0) / var(--numcards) * 100% + 53% );
-	--end-range: calc(var(--index) / var(--numcards) * 100% - 5% );
+	--start-range: calc(var(--index0) / var(--numcards) * 100% + 30% );
+	--end-range: calc(var(--index) / var(--numcards) * 100% - 15% );
 
 	
 }
@@ -203,6 +196,37 @@ p{
     color: #fafaf9A6;
     font-size: 19px;
     font-weight: 400;
+}
+
+@media (min-width: 640px) {
+    h2{
+        top: 100px;
+    }
+
+    .card{
+        top: 150px;
+    }
+  }
+
+  @media (min-height: 800px) {
+    .card{
+        padding-top: calc(var(--index)* 2.7vh);
+    }
+    .card__content{
+        --start-range: calc(var(--index0) / var(--numcards) * 100% + 53% );
+	    --end-range: calc(var(--index) / var(--numcards) * 100% - 5% );
+    }
+    
+  }
+
+
+
+  @supports(animation-timeline: scroll()){
+    .card__content{
+        animation: linear scale forwards;
+	    animation-timeline: --cards-element-scrolls-in-body;
+	    animation-range: entry-crossing var(--start-range) exit-crossing var(--end-range);
+    }
 }
 
 </style>

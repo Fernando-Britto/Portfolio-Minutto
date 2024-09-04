@@ -15,10 +15,10 @@ const i18n = getI18N({ currentLocale })
 
 <Layout>
   <section id="about" class="about-me mb-[10rem] sm:mb-[12.5rem] mx-0">
-    <h2> <AboutIcon width="45px" height="45px"/>{i18n.ABOUT}</h2>
+    <h2> <AboutIcon/>{i18n.ABOUT}</h2>
     <div class="contenedor">
       <article  class="p-6 md:p-8 flex flex-col col-span-10 sm:col-span-5" >
-        <header > <LinkedInIcon width="30px" height="30px"/><h3>{i18n.EXPERIENCE_TITLE}</h3> </header>
+        <header > <LinkedInIcon size="icon"/><h3>{i18n.EXPERIENCE_TITLE}</h3> </header>
         <ul class="trabajos">
           <li class="trabajo">
             <div class="headerTrabajo flex flex-col lg:flex-row items-start" >
@@ -67,7 +67,7 @@ const i18n = getI18N({ currentLocale })
           
           <div id="contact" class="linkSocials">
               <a class="link" href="https://www.instagram.com/minuttos_"><InstaIcon/></a>
-              <a class="link" href="https://www.linkedin.com/in/brittofernando"><LinkedInIcon width="40px" height="40px" /></a>
+              <a class="link" href="https://www.linkedin.com/in/brittofernando"><LinkedInIcon size="iconAbout" /></a>
               <a class="link" href="mailto:fernandobritto925@gmail.com"><MailIcon size="mailAbout"/></a>
               <a class="link" href="https://github.com/Fernando-Britto"><GitHubIcon width="40px" height="40px"/></a>
           </div>
